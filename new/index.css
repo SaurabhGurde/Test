@@ -1,0 +1,16 @@
+.flex{
+    display: flex;
+    border: 2px solid black;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    
+}
+.box{
+    margin-left: 40%;
+    margin: 10px;
+    width: 200px;
+    height: 200px;
+    border: 2px solid black;
+}
