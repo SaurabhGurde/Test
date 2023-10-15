@@ -3,7 +3,7 @@ import loading from "./loading.gif";
 
 const Loading = () => {
   return (
-    <div>
+    <div style={{marginLeft:"35vw"}}>
         <img src={loading} alt='loading' />
     </div>
   )

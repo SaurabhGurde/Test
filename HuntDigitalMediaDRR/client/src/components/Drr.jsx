@@ -76,6 +76,7 @@ useEffect(()=>{
 }, [])
 
   return (
+    <div>
     <table className="table" style={{ marginTop: "10%" }}>
       <thead>
         <tr>
@@ -161,10 +162,12 @@ useEffect(()=>{
                 
         </tr>)
          })
-         :  <Loading/>}
+         :  ""}
 
       </tbody>
     </table>
+    {!drrData && <Loading/>}
+    </div>
   );
 };
 
