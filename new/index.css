@@ -1,14 +1,13 @@
 .flex{
-    display: flex;
+    
     border: 2px solid black;
-    width: 100vw;
-    height: 100vh;
-    justify-content: center;
-    align-items: center;
+    width: 95vw;
+    height: 95vh;
+   
     
 }
 .box{
-    margin-left: 40%;
+    margin-top: 400px !important;
     margin: 10px;
     width: 200px;
     height: 200px;
