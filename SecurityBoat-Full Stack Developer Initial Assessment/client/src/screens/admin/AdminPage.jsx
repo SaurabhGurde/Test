@@ -10,12 +10,10 @@ const AdminPage = () => {
     
    
      const data = useSelector((state) => state.data.data);
-
     const [addData, setAddData] = useState("")
     const [editData, setEditData] = useState("")
 
-
-
+   
 //-----------------------handle user table data  data--------------------------------
     const getData = async () => {
         const response = await fetch(`${process.env.REACT_APP_BASE_URL}/admin/getdata`, {
@@ -87,15 +85,15 @@ const AdminPage = () => {
 
     useEffect(() => {
         getData();
-        
+        console.log(data)
     }, []);
 
     return (
         <div>
-            {!data &&
-                <Loading/>
-            }
-            {data&& data.map((data)=>
+           {data.length === 0 && <Loading />}
+
+           
+            {data && data.map((data)=>
             <AdminTable
               key={data._id}
               email={data.email}

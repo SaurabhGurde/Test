@@ -12,7 +12,6 @@ const UserPage = () => {
     const token = localStorage.getItem('token');
      const data = useSelector((state) => state.data.data);
     const [isAddConfirmDataOpen, setAddConfirmDataOpen] = useState(true);
-    const [isDeleteConfirmOpen, setDeleteConfirmOpen] = useState(true);
     const [isEditedRowOpen, setisEditedRowOpen] = useState(-1);
     const [addData, setAddData] = useState("")
     const [editData, setEditData] = useState("")
@@ -108,9 +107,8 @@ const handleLogout = ()=>{
 
     return (
         <div>
-           {!data&&
-               <Loading/>
-           }
+           {data.length === 0 && <Loading />}
+           
             <h1 style={{ textAlign: "center", marginTop: "10px" }}>{userEmail} <button onClick={handleLogout} style={{position:"relative", left:"200px"}} className='btn btn-danger'>Logout</button></h1>
             <table style={{ width: "90vw", marginLeft: "5vw", marginTop: "" }} className="table m-5">
                 <thead className="thead-dark">
