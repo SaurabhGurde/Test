@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getUserData } from '../../redux/slice';
 import AdminTable from './AdminTable';
+import Loading from '../components/Loading';
 
 const AdminPage = () => {
 
@@ -91,6 +92,9 @@ const AdminPage = () => {
 
     return (
         <div>
+            {!data &&
+                <Loading/>
+            }
             {data&& data.map((data)=>
             <AdminTable
               key={data._id}
@@ -103,7 +107,7 @@ const AdminPage = () => {
               setEditData={setEditData}
             />
             )}
-            
+             
         </div>
     );
 };

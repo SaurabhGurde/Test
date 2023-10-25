@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { getUserData } from '../../redux/slice';
+import Loading from '../components/Loading';
 
 const UserPage = () => {
 
@@ -107,7 +108,9 @@ const handleLogout = ()=>{
 
     return (
         <div>
-           
+           {!data&&
+               <Loading/>
+           }
             <h1 style={{ textAlign: "center", marginTop: "10px" }}>{userEmail} <button onClick={handleLogout} style={{position:"relative", left:"200px"}} className='btn btn-danger'>Logout</button></h1>
             <table style={{ width: "90vw", marginLeft: "5vw", marginTop: "" }} className="table m-5">
                 <thead className="thead-dark">
