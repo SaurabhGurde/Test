@@ -108,9 +108,9 @@ const handleLogout = ()=>{
 
     return (
         <div>
-           {data.length === 0 && <Loading />}
            
             <h2 style={{ textAlign: "center", marginTop: "10px" }}>{userEmail} <button onClick={handleLogout} style={{position:"relative", left:"200px"}} className='btn btn-danger'>Logout</button></h2>
+           {data.length === 0 && <Loading />}
             <table style={{ width: "90vw", marginLeft: "5vw", marginTop: "" }} className="table m-5">
                 <thead className="thead-dark">
                     <tr>

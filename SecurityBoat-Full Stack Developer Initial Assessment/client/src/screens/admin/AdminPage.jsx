@@ -96,10 +96,10 @@ const AdminPage = () => {
 
     return (
         <div>
-           {data.length === 0 && <Loading />}
 
            <h1 style={{ textAlign: "center", marginTop: "10px" }}>Admin <button onClick={handleLogout} style={{position:"relative", left:"200px"}} className='btn btn-danger'>Logout</button></h1>   
            <hr style={{background: 'black',color: 'black',borderColor: 'black',height: '3px',marginBottom:"50px"}}/>
+           {data.length === 0 && <Loading />}
 
            {data && data.map((data)=>
             <AdminTable
