@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { getUserData } from '../../redux/slice';
+import { getUserData,resetData } from '../../redux/slice';
 import Loading from '../components/Loading';
 
 const UserPage = () => {
@@ -98,6 +98,7 @@ const UserPage = () => {
 const handleLogout = ()=>{
     localStorage.removeItem('token')
     localStorage.removeItem('userEmail')
+    dispatch(resetData())
     navigate("/")
 }
     useEffect(() => {
@@ -109,7 +110,7 @@ const handleLogout = ()=>{
         <div>
            {data.length === 0 && <Loading />}
            
-            <h1 style={{ textAlign: "center", marginTop: "10px" }}>{userEmail} <button onClick={handleLogout} style={{position:"relative", left:"200px"}} className='btn btn-danger'>Logout</button></h1>
+            <h2 style={{ textAlign: "center", marginTop: "10px" }}>{userEmail} <button onClick={handleLogout} style={{position:"relative", left:"200px"}} className='btn btn-danger'>Logout</button></h2>
             <table style={{ width: "90vw", marginLeft: "5vw", marginTop: "" }} className="table m-5">
                 <thead className="thead-dark">
                     <tr>

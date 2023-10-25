@@ -4,7 +4,8 @@ import { useNavigate } from 'react-router-dom'
 const AdminLogin = () => {
     const navigate = useNavigate();
 
-    const submitForm = ()=>{
+    const submitForm = (e)=>{
+        e.preventDefault();
           navigate('/adminpage');
     }
     return (

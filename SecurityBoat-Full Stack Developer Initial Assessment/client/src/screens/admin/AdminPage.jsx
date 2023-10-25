@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getUserData } from '../../redux/slice';
+import { getUserData, resetData } from '../../redux/slice';
 import AdminTable from './AdminTable';
 import Loading from '../components/Loading';
+import { useNavigate } from 'react-router-dom';
 
 const AdminPage = () => {
 
     const dispatch = useDispatch();
-    
+    const navigate = useNavigate();
    
      const data = useSelector((state) => state.data.data);
     const [addData, setAddData] = useState("")
@@ -82,18 +83,25 @@ const AdminPage = () => {
             alert("DeleteData Failed")
         }
     }
+    
+    const handleLogout = ()=>{
+       dispatch(resetData());
+       navigate("/")
+    }
 
     useEffect(() => {
         getData();
-        console.log(data)
+        
     }, []);
 
     return (
         <div>
            {data.length === 0 && <Loading />}
 
-           
-            {data && data.map((data)=>
+           <h1 style={{ textAlign: "center", marginTop: "10px" }}>Admin <button onClick={handleLogout} style={{position:"relative", left:"200px"}} className='btn btn-danger'>Logout</button></h1>   
+           <hr style={{background: 'black',color: 'black',borderColor: 'black',height: '3px',marginBottom:"50px"}}/>
+
+           {data && data.map((data)=>
             <AdminTable
               key={data._id}
               email={data.email}
