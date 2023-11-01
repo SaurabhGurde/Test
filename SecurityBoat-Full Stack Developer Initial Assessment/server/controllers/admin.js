@@ -10,7 +10,6 @@ export const getData = async (req,res)=>{
   }
 }
 
-
 export const addData= async (req, res) => {
   try {
     // console.log("endpoint")
@@ -28,7 +27,6 @@ export const addData= async (req, res) => {
     res.status(500).send("Server Error");
   }
 };
-
 
 export const updateUserData = async(req,res) => {
 
