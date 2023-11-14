@@ -60,9 +60,10 @@ const ProductList = () => {
 
     useEffect(() => {
         dispatch(getDataAsync());
-
+       
     }, []);
     useEffect(() => {
+      
         handlePaginationData()
     }, [productData])
 
