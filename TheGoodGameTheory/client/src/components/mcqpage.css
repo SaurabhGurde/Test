@@ -1,0 +1,17 @@
+.box {
+    min-height: 50vh;
+    width: 70vw;
+    padding: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20vh;
+    background-color: #f3f3de;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.answer-box{
+    display: flex;
+    margin-left: 20px;
+}
+  

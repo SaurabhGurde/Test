@@ -28,7 +28,7 @@ const Properties = () => {
       },[])
   return (
     <>
-    { Data ? Data.map((e)=> 
+    { Data.length !==0 ? Data.map((e)=> 
    
     <div style={{ marginLeft: "50px", marginTop:"30px" }}>
       <div className="card" style={{ width: "18rem" }}>
@@ -43,7 +43,7 @@ const Properties = () => {
     </div>
     )
     
-    :""
+    :<div>Loading...</div>
     }
     </>
   )

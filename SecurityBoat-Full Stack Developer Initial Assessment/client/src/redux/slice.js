@@ -9,8 +9,7 @@ export const dataSlice = createSlice({
   name: 'data',
   initialState,
 
-  reducers: {
-    
+  reducers: {    
  
     getUserData: (state, action) => {
       state.data = action.payload;
@@ -20,8 +19,6 @@ export const dataSlice = createSlice({
     }
   },
  
-
-
 });
 
 export const { getUserData , resetData } = dataSlice.actions;
