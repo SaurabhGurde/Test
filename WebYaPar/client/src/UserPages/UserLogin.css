@@ -1,0 +1,25 @@
+.box{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.left-box{
+    width: 60%;
+    height: 100vh;
+    background-color: #0500FF;
+}
+
+.right-box{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+}
+form{
+    width: 80%;
+    margin-top: 30px;
+}

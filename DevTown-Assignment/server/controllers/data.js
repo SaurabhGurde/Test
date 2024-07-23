@@ -12,6 +12,7 @@ export const getData = async(req,res)=>{
 
 export const getFilterData = async(req,res)=>{
     const category = req.body.category;
+    console.log(category)
     try {
         const data = await Product.find({category})
         res.status(200).json(data)  ;  

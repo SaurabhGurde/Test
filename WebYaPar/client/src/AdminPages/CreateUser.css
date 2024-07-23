@@ -1,0 +1,23 @@
+.create-user-box{
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.create-user-left-box{
+    width: 50%;
+    height: 100%;
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.create-user-right-box{
+    width: 50%;
+    height: 100%;
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
